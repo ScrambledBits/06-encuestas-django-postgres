@@ -1,0 +1,15 @@
+{% extends "encuestas/base.html" %}
+{% block titulo %}{{ pregunta.texto }}{% endblock %}
+{% block contenido %}
+<form action="{% url 'encuestas:votar' pregunta.id %}" method="post">
+  {% csrf_token %}
+  <fieldset>
+    <legend><h1>{{ pregunta.texto }}</h1></legend>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    {% for opcion in pregunta.opciones.all %}
+    <label><input type="radio" name="opcion" value="{{ opcion.id }}"> {{ opcion.texto }}</label>
+    {% endfor %}
+  </fieldset>
+  <button>Votar</button>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "encuestas/base.html" %}
+{% block contenido %}
+<h1>Preguntas</h1>
+{% if preguntas %}
+<ul class="lista">
+  {% for pregunta in preguntas %}
+  <li><a href="{% url 'encuestas:detalle' pregunta.id %}">{{ pregunta.texto }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No hay encuestas todavía. Crea una desde el <a href="/admin/">panel de administración</a>.</p>
+{% endif %}
+<p class="pie">Servido por el contenedor <code>{{ contenedor }}</code></p>
+{% endblock %}

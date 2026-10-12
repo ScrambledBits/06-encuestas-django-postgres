@@ -1,0 +1,11 @@
+[
+  {"model": "encuestas.pregunta", "pk": 1, "fields": {"texto": "¿Cuál es tu lenguaje de programación favorito?", "publicada_en": "2026-01-01T12:00:00Z"}},
+  {"model": "encuestas.opcion", "pk": 1, "fields": {"pregunta": 1, "texto": "Python", "votos": 0}},
+  {"model": "encuestas.opcion", "pk": 2, "fields": {"pregunta": 1, "texto": "JavaScript", "votos": 0}},
+  {"model": "encuestas.opcion", "pk": 3, "fields": {"pregunta": 1, "texto": "Go", "votos": 0}},
+  {"model": "encuestas.opcion", "pk": 4, "fields": {"pregunta": 1, "texto": "Rust", "votos": 0}},
+  {"model": "encuestas.pregunta", "pk": 2, "fields": {"texto": "¿Qué herramienta de contenedores usas más?", "publicada_en": "2026-01-02T12:00:00Z"}},
+  {"model": "encuestas.opcion", "pk": 5, "fields": {"pregunta": 2, "texto": "Docker", "votos": 0}},
+  {"model": "encuestas.opcion", "pk": 6, "fields": {"pregunta": 2, "texto": "Podman", "votos": 0}},
+  {"model": "encuestas.opcion", "pk": 7, "fields": {"pregunta": 2, "texto": "Ninguna todavía", "votos": 0}}
+]

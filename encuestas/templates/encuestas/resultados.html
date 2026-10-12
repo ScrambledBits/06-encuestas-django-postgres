@@ -1,0 +1,12 @@
+{% extends "encuestas/base.html" %}
+{% block titulo %}Resultados{% endblock %}
+{% block contenido %}
+<h1>{{ pregunta.texto }}</h1>
+<ul class="lista">
+  {% for opcion in pregunta.opciones.all %}
+  <li>{{ opcion.texto }} — <strong>{{ opcion.votos }}</strong> voto{{ opcion.votos|pluralize }}</li>
+  {% endfor %}
+</ul>
+<p>Total: {{ pregunta.total_votos }}</p>
+<a href="{% url 'encuestas:detalle' pregunta.id %}">¿Votar de nuevo?</a>
+{% endblock %}

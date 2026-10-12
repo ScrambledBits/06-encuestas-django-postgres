@@ -1,0 +1,13 @@
+{% load static %}<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Encuestas{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'encuestas/estilos.css' %}">
+</head>
+<body>
+  <header><a href="{% url 'encuestas:indice' %}">Encuestas</a></header>
+  <main>{% block contenido %}{% endblock %}</main>
+</body>
+</html>
